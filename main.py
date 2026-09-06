@@ -48,7 +48,13 @@ def home():
         "board": "Wemos D1 Mini ESP8266"
     }
 
-
+@app.get("/test")
+def test():
+    return {
+        "ok": True,
+        "message": "Render received the request!",
+        "service": "D1 Mini Compiler"
+}
 # =========================================================
 # COMPILE
 # =========================================================
