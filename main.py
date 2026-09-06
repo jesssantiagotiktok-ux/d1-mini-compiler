@@ -54,7 +54,7 @@ def test():
         "ok": True,
         "message": "Render received the request!",
         "service": "D1 Mini Compiler"
-}
+    }
 # =========================================================
 # COMPILE
 # =========================================================
