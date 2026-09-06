@@ -290,7 +290,7 @@ monitor_speed = 115200
 
             text=True,
 
-            timeout=300
+            timeout=900
 
         )
 
@@ -413,22 +413,11 @@ monitor_speed = 115200
 
 
     except subprocess.TimeoutExpired:
-
-        print(
-            "COMPILATION TIMEOUT"
-        )
-
-
-        raise HTTPException(
-
-            status_code=408,
-
-            detail=(
-                "Compilation timed out after "
-                "5 minutes."
-            )
-
-        )
+    print("COMPILATION TIMEOUT")
+    raise HTTPException(
+        status_code=408,
+        detail="Compilation timed out after 15 minutes."
+    )
 
 
     except HTTPException:
